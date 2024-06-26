@@ -9,9 +9,9 @@ class Mahasiswa extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'nim', 'email', 'alamat'];
+    protected $fillable = ['nama', 'nim', 'email', 'alamat',];
 
-    public function perkuliahans()
+    public function perkuliahans(): HasMany
     {
         return $this->hasMany(Perkuliahan::class);
     }
